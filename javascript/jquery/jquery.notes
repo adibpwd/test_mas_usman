@@ -1,0 +1,132 @@
+    // recomend summary ( ringkasan ) jquery selector other ( # ) ( . ) ( tag )
+    // https://www.w3schools.com/jquery/jquery_ref_selectors.asp
+
+
+    // mouseup dan mousedown sama2 bisa diklik dari elementnya dan kanan element
+
+      a: = jika ber argumen tinggi (heght, innerHeight, outerHeight) / lebar (width, innerWidth, outerWidth) element akan berubah sesuai value ditentukan
+      b: = top,left,top / bottom .
+
+
+    jquery: events:
+
+    => click()      : one click
+       dblclick()   : double click
+       hover()      : mouseenter + mouseleave in one method
+       focus()      : input focus
+       blur()       : input dari focus ke tidak focus
+       mouseenter() : in up element
+       mouseleave() : out from out element
+       mousedown()  : click right element
+       mouseup()    : click right element
+       on()         : not recomend because langsung pakai method diatas gk ada bedanya
+
+    jquery: efex:
+ 
+    => toggle()   : hide / show element          [speed, callback]
+       hide()     : hide element                 [speed, callback]
+       show()     : show element                 [speed, callback]
+                    => slideToggle()  :  slide down / up element   [speed, callback]
+       slide()    : => slideDown()    :  slide down element        [speed, callback]
+                    => slideUp()      :  slide up element          [speed, callback]
+       fade       : => fadeIn()     :  show element memudar        [speed, callback]
+                    => fadeOut()    :  hide element memudar        [speed, callback]
+                    => fadeToggle() :  show / hide element memudar [speed, callback]
+                    => fadeTo()     :  change opacity element      [speed, opacity, callback]
+       animate()  : make animation        [{params}, speed, callback]
+       stop()     : stop efek / animate element before stop        [stopAll, goToEnd] < stop animate() & fadeTo harus double click >
+       callback   : function execution after animate finished
+       chaining : use beberapa method 1 baris 1 element dengan penghubung titik ( . )
+
+    jquery: html&css:  
+
+      // selain 3 method ini masih ada lagi di https://www.w3schools.com/jquery/jquery_ref_html.asp
+
+    =>    //  CLASS : ADD  |  REMOVE  |  CHECK
+            - toggleClass()   :  jika udah ada dihapus. kalau belum ditambahkan
+            - hasClass()      :  check if ada class dengan nama yang ditentukan
+            - removeClass()   :  delete name class
+            - addClass()      :  add class jika sudah ada tidak menambah class
+         //  STYLE : ADD   
+            - css() 	         :  add style to element
+         //  ATTRIBUTTE : REPLACE  |  REMOVE   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+            - attr() 	      :  add / replace attributte                                                                                 [  recomended  ]
+            - removeAttr()    :  remove attributte                                                                                  [  recomended  ]
+            - prop() 	      :  = attr()                                                                                           [    attr()    ]
+            - removeProp()    :  = removeAttr()                                                                                     [ removeAttr() ]
+         //  INSERT CONTENT :  AFTER EL |  BEFORE EL     
+            - after() 	      :  insert html content after element                                                                  [  recomended  ]
+            - before()        :  = after() but this before element                                                                  [  recomended  ]
+            - insertAfter() 	:  = after() different syntaks                                                                                      [    after()   ]
+            - insertBefore()  :  = before() different syntaks                                                                                          [   before()   ]
+            - append()        :  insert html content di dalam element paling akhir                                                  [  recomended  ]
+            - prepend()       :  = append() but this in awal element                                                                [  recomended  ]
+            - appendTo()      :  = append()  different syntaks                                                                      [   append()   ]
+            - prependTo()     :  = prepend() different syntaks                                                                      [   prepend()  ]    
+         //  ? : REPLACE  |  DELETE  |  CLONE
+            - html()          :  replace element with teks, html                                                                    [  recomended  ]
+            - replaceAll()    :  replace element with html only                                                                     [ replaceWith()]
+            - replaceWith()   :  = replaceAll() but support html and text biasa                                                     [  recomended  ]
+            - clone()         :  clone element 1 element with attributte, text, html. sepertinya harus ditemani appendTo & prependTo. pakai append belum bisa
+            - empty() 	      :  delete didalam element yang dituju.tanpa delete element yang dituju
+            - detach() 	      :  delete element but save data and events                                                            [  recomended  ]
+            - remove() 	      :  delete element beserta data and events                                                             [   detach()   ]
+            - text()          :  mengambil isi teks element. jika ber argumen = html()
+            - val() 	         :  jika ber argumen untuk mengisi value element kalau tidak mengambil value dari element
+         //  WIDTH & HIGHT 
+            - height()        :  if not have argumen return height elementnya berapa.. a:
+            - width() 	      :  if not have argumen return width elementnya berapa..  a:
+            - innerWidth() 	:  mereturn lebar element termasuk padding a:
+            - innerHeight() 	:  mereturn tinggi element termasuk padding a:
+            - outerHeight()   :  mereturn tinggi element termasuk padding dan border a: 
+            - outerWidth()    :  mereturn lebar element termausk padding dan border a:
+         //  POSITION 
+            - offset() 	      :  return titik koordinat sebuah element. jika ingin mengatur koordinat element isi argumen b:        [  recomended  ]
+            - position()     :   melihat posisi b: aja                                                                              [   offset()   ]
+            - offsetParent() :   gak berfungsi jika tidak ada method lain. gak akan kepakek mending langsung pakai method lain  
+         //   SCROLL : LEFT  |  RIGHT
+            - scrollLeft()   :   argumen untuk mengatur pixel scroll kekiri. jika kosong check diberapa pixel scrollnya
+            - scrollTop()    :   different between left and top with scrollLeft()
+         // WRAP ( BUNGKUS )
+            - wrap() 	     :   menambah element pembungkus untuk suatu element                                                    [  recomended  ]
+            - wrapAll()      :   = wrap()                                                                                           [    wrap()    ]      
+            - unwrap()       :   menghapus element induk / pembungkus dari element
+            - wrapInner() 	  :   argument gantiin element sedangkan element tadi dijadiin element induk
+
+       jquery: traversing:
+   
+       =>   
+            -  parent()        :  find 1 parent nya si element
+            -  parents()       :  find semua parent nya si element sampai ke nenek moyang sampai mentok sampai tag html
+            -  parentsUntil()  :  find parent dengan 2 params params pertama child dari parent yang akan kita find, params 2 batas parent yang kita cari dan batasnya tidak ikut kecari
+            -  children()      :  find all child from parent yang sudah ditentukan
+            -  find()          :  find element child from parent
+            -  siblings()      :  find saudaranya element
+            -  next()          :  find element selanjutnya
+            -  nextAll()       :  find all element selanjutnya
+            -  nextUntil()     :  find all element between 2 element
+            -  prev()          :  = next() but find from back not first
+            -  prevAll()       :  = nextAll() but find from back not first
+            -  prevUntil()     :  = nextUntil() but find from back not first
+            -  first()         :  find element yang first ' pertama '
+            -  last()          :  = first() but from back not first
+            -  eq()            :  find element with index
+            -  filter()        :  find element with className or idName dll
+            -  not()           :  = filter() kebalikan
+      
+      jquery: misc/lain2:  // noConflict() skip codenya nggak jlan
+
+      =>
+           -  noConflict();    : jika ada framework js pakai $ untuk syntaknya masih bisa pakai jquery dengan method confict ini 
+
+ 
+
+
+
+
+
+
+
+
+
+            

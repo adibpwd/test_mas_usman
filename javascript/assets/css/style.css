@@ -1,0 +1,36 @@
+    #slide {
+    padding: 5px;
+    text-align: center;
+    color: white;
+    background-color: #000000;
+    border: solid 1px #ff0202;
+    }
+
+    #slide {
+    font-size: 70px;
+    padding: 50px;
+    display: none;
+    }
+
+    /* #animation {
+        background-color: blue;
+    } */
+
+    .scroll {
+        width: 50%;
+        height: 40px;
+        overflow: auto;
+        white-space: nowrap;
+        background-color: rgba(32, 95, 212, 0.253);
+    }
+    
+    .scroll1 {
+        overflow-y: auto;
+        width: 50%;
+        height: 100px;
+        background-color: rgba(32, 95, 212, 0.253);
+    }
+
+    span {
+        background-color: red;
+    }
